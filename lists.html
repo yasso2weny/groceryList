@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Groceries</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+        <!--Logo Container-->
+    <div class="logo-container">
+      <img src="logo.png" alt="">
+    </div>
+
+        <!--Burger Menu-->
+    <div class="burger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+        <!--Main Container-->
+    <div class="container">
+      <h1 class="title">Groceries</h1>
+      <form id="to-do-form">
+        <button style="color: #27AE60;" type="submit" id="add-button">+</button>
+        <input type="text" placeholder="Enter Food Item" id="input-task">
+      </form>
+      <ul id="task-list"></ul>
+    </div>
+    
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+      const params = new URLSearchParams(window.location.search);
+      const listName = params.get('list');
+      renderTasks(listName);
+    </script>
+  </body>
+</html>
